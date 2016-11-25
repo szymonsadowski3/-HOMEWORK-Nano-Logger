@@ -4,11 +4,26 @@ import java.util.Date;
 
 import sadowski.interfaces.Message;
 
+/**
+ * Custom implementation of Message interface
+ * 
+ * @author Szymon Sadowski
+ *
+ */
 public class SimpleMessage implements Message {
 	private Date date = new Date();
 	private String msg;
 	private Level level;
 
+	/**
+	 * Constructor which sets message, level, and sets Date to current Date in
+	 * OS
+	 * 
+	 * @param msg
+	 *            Log message
+	 * @param level
+	 *            Level of importance
+	 */
 	public SimpleMessage(String msg, Level level) {
 		super();
 		this.msg = msg;

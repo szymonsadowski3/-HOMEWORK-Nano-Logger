@@ -2,6 +2,11 @@ package sadowski;
 
 import sadowski.interfaces.*;
 
+/**
+ * Singleton, custom implementation of Logger interface
+ * @author Szymon Sadowski
+ *
+ */
 public class MyLogger implements Logger {
 	private static Logger INSTANCE;
 	private Level level;
@@ -10,6 +15,11 @@ public class MyLogger implements Logger {
 	private MyLogger() {
 	}
 
+	/**
+	 * "getInstance()" type method from Singleton pattern
+	 * @return
+	 * Only existing instance of Logger
+	 */
 	public static Logger getLoggerInstance() {
 		if (INSTANCE == null)
 			INSTANCE = new MyLogger();

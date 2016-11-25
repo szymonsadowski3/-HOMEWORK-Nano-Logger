@@ -6,9 +6,20 @@ import java.io.PrintWriter;
 import sadowski.interfaces.Handler;
 import sadowski.interfaces.Message;
 
+/**
+ * Handler that prints log message to Text File
+ * @author Szymon Sadowski
+ *
+ */
 public class FileHandler implements Handler {
+	/**
+	 * Path to file, where handler writes log messages
+	 */
 	private String outputPath;
 	
+	/**
+	 * Auxiliary, which clears file before using it
+	 */
 	private void clearFile() {
 		try {
 			LogFileWriter.writeLine(outputPath, "", false);
@@ -17,6 +28,11 @@ public class FileHandler implements Handler {
 		}
 	}
 
+	/**
+	 * This constructor only sets outputPath
+	 * @param outputPath
+	 * Path to file, where handler writes log messages
+	 */
 	public FileHandler(String outputPath) {
 		super();
 		this.outputPath = outputPath;

@@ -8,7 +8,22 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
+/**
+ * Simple class which allows to write some content to file
+ * @author SzymonSadowski
+ *
+ */
 public class LogFileWriter {
+	/**
+	 * Simple method which allows to write some lines to file
+	 * @param path
+	 * To file under this path method will write
+	 * @param lines
+	 * Array of Strings to be written
+	 * @param append
+	 * Set to true if method should append content to file, false if method should write from scratch
+	 * @throws IOException
+	 */
 	static void writeLines(String path, String[] lines, boolean append) throws IOException {
 		File outputFile = new File(path);
 		outputFile.createNewFile();
@@ -22,6 +37,16 @@ public class LogFileWriter {
 		w.close();
 	}
 
+	/**
+	 * Simple method which allows to write single to file
+	 * @param path
+	 * To file under this path method will write
+	 * @param line
+	 * String to be written
+	 * @param append
+	 * Set to true if method should append line to file, false if method should write from scratch
+	 * @throws IOException
+	 */
 	static void writeLine(String path, String line, boolean append) throws IOException {
 		File outputFile = new File(path);
 		outputFile.createNewFile();
